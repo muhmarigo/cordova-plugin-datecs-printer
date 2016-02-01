@@ -384,7 +384,7 @@ public class DatecsSDKWrapper {
             textBuffer.append(text);
             
             mPrinter.reset();            
-            mPrinter.printTaggedText(textBuffer.toString(),charset);            
+            mPrinter.printTaggedText(textBuffer.toString());            
             mPrinter.feedPaper(110);            
             mPrinter.flush();
             
