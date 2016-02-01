@@ -387,8 +387,16 @@ public class DatecsSDKWrapper {
      */
     public void printTaggedText(String text, String charset) {
         try {
-            mPrinter.printTaggedText(text, charset);
+            
+            StringBuffer textBuffer = new StringBuffer();
+            
+            textBuffer.append(text);
+            
+            mPrinter.reset();            
+            mPrinter.printTaggedText(textBuffer.toString(),charset);            
+            mPrinter.feedPaper(110);            
             mPrinter.flush();
+            
             mCallbackContext.success();
         } catch (Exception e) {
             mCallbackContext.error(this.getErrorByCode(5, e));
