@@ -153,7 +153,11 @@ public class DatecsSDKWrapper {
                 JSONArray json = new JSONArray();
                 for (BluetoothDevice device : pairedDevices) {
                     Hashtable map = new Hashtable();
-                    map.put("type", device.getType());
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+                        map.put("type", device.getType());
+                    }else{
+                        map.put("type", "unknown");
+                    }
                     map.put("address", device.getAddress());
                     map.put("name", device.getName());
                     JSONObject jObj = new JSONObject(map);
