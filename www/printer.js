@@ -25,8 +25,8 @@ var printer = {
   feedPaper: function(lines, onSuccess, onError) {
     exec(onSuccess, onError, 'DatecsPrinter', 'feedPaper', [lines]);
   },
-  printText: function(text, charset, onSuccess, onError) {
-    exec(onSuccess, onError, 'DatecsPrinter', 'printText', [text, charset]);
+  printText: function(text, onSuccess, onError) {
+    exec(onSuccess, onError, 'DatecsPrinter', 'printText', [text]);
   },
   printSelfTest: function (onSuccess, onError) {
     exec(onSuccess, onError, 'DatecsPrinter', 'printSelfTest', []);

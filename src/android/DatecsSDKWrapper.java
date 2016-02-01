@@ -371,21 +371,12 @@ public class DatecsSDKWrapper {
     }
 
     /**
-     * Print text expecting markup formatting tags (default encoding is ISO-8859-1)
-     *
-     * @param text
-     */
-    public void printTaggedText(String text) {
-        printTaggedText(text, "ISO-8859-1");
-    }
-
-    /**
      * Print text expecting markup formatting tags and a defined charset
      *
      * @param text
      * @param charset
      */
-    public void printTaggedText(String text, String charset) {
+    public void printTaggedText(String text) {
         try {
             
             StringBuffer textBuffer = new StringBuffer();

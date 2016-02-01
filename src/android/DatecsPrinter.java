@@ -61,9 +61,8 @@ public class DatecsPrinter extends CordovaPlugin {
 				printer.feedPaper(args.getInt(0));
 				break;
 			case printText:
-				String text = args.getString(0);
-				String charset = args.getString(1);
-				printer.printTaggedText(text, charset);
+				String text = args.getString(0);				
+				printer.printTaggedText(text);
 				break;
 			case getStatus:
 				printer.getStatus();
